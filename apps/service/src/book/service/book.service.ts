@@ -13,4 +13,12 @@ export class BookService extends PGBaseService {
   ) {
     super(repository);
   }
+
+  /**
+   * @param {Object} obj The request object
+   * @return {Promise<Object>}
+   */
+  public async retrieveExistingResource(obj) {
+    return await this.repository.findOne({ where: { isbn: obj.isbn } });
+  }
 }
