@@ -227,3 +227,5 @@ with a successful response sample
     }
 }
 ```
+
+To run test run yarn test:unit
