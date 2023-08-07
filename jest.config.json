@@ -1,0 +1,23 @@
+{
+  "bail": true,
+  "testTimeout": 20000,
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testRegex": ".*\\.spec\\.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "collectCoverageFrom": [
+    "<rootDir>/_shared/**/*.(t|j)s",
+    "<rootDir>/apps/serivce/src/**/*.(t|j)s"
+  ],
+  "coveragePathIgnorePatterns": ["/node_modules/", "/.node/", "/jest/"],
+  "coverageDirectory": "<rootDir>/coverage",
+  "collectCoverage": true,
+  "moduleNameMapper": {
+    "^@config": "<rootDir>/config",
+    "^@config/(.*)": "<rootDir>/config/$1"
+  },
+  "testEnvironment": "node",
+  "roots": ["<rootDir>/"]
+}
